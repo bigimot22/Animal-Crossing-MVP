@@ -12,6 +12,8 @@
 		04BE0D9329B38CDA00A3D152 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BE0D9229B38CDA00A3D152 /* ViewController.swift */; };
 		04BE0D9829B38CDB00A3D152 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BE0D9729B38CDB00A3D152 /* Assets.xcassets */; };
 		04BE0D9B29B38CDB00A3D152 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BE0D9929B38CDB00A3D152 /* LaunchScreen.storyboard */; };
+		04BE0DA329B38F6900A3D152 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BE0DA229B38F6900A3D152 /* HTTPClient.swift */; };
+		04BE0DA529B38F8F00A3D152 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BE0DA429B38F8F00A3D152 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		04BE0D9729B38CDB00A3D152 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04BE0D9A29B38CDB00A3D152 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04BE0D9C29B38CDB00A3D152 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04BE0DA229B38F6900A3D152 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		04BE0DA429B38F8F00A3D152 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 				04BE0D8E29B38CDA00A3D152 /* AppDelegate.swift */,
 				04BE0D9029B38CDA00A3D152 /* SceneDelegate.swift */,
 				04BE0D9229B38CDA00A3D152 /* ViewController.swift */,
+				04BE0DA229B38F6900A3D152 /* HTTPClient.swift */,
+				04BE0DA429B38F8F00A3D152 /* NetworkError.swift */,
 				04BE0D9729B38CDB00A3D152 /* Assets.xcassets */,
 				04BE0D9929B38CDB00A3D152 /* LaunchScreen.storyboard */,
 				04BE0D9C29B38CDB00A3D152 /* Info.plist */,
@@ -136,7 +142,9 @@
 			files = (
 				04BE0D9329B38CDA00A3D152 /* ViewController.swift in Sources */,
 				04BE0D8F29B38CDA00A3D152 /* AppDelegate.swift in Sources */,
+				04BE0DA329B38F6900A3D152 /* HTTPClient.swift in Sources */,
 				04BE0D9129B38CDA00A3D152 /* SceneDelegate.swift in Sources */,
+				04BE0DA529B38F8F00A3D152 /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
