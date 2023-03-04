@@ -67,16 +67,24 @@
 				04BE0D8E29B38CDA00A3D152 /* AppDelegate.swift */,
 				04BE0D9029B38CDA00A3D152 /* SceneDelegate.swift */,
 				04BE0D9229B38CDA00A3D152 /* ViewController.swift */,
-				04BE0DA229B38F6900A3D152 /* HTTPClient.swift */,
-				04BE0DA629B3907F00A3D152 /* AnimalService.swift */,
-				04BE0DA829B3964B00A3D152 /* AnimalMapper.swift */,
-				04BE0DA429B38F8F00A3D152 /* NetworkError.swift */,
-				04BE0DAA29B3A30300A3D152 /* Animal.swift */,
+				04BE0DAC29B3A49A00A3D152 /* Model */,
 				04BE0D9729B38CDB00A3D152 /* Assets.xcassets */,
 				04BE0D9929B38CDB00A3D152 /* LaunchScreen.storyboard */,
 				04BE0D9C29B38CDB00A3D152 /* Info.plist */,
 			);
 			path = "Animal Crossing MVP";
+			sourceTree = "<group>";
+		};
+		04BE0DAC29B3A49A00A3D152 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04BE0DA229B38F6900A3D152 /* HTTPClient.swift */,
+				04BE0DA629B3907F00A3D152 /* AnimalService.swift */,
+				04BE0DA829B3964B00A3D152 /* AnimalMapper.swift */,
+				04BE0DA429B38F8F00A3D152 /* NetworkError.swift */,
+				04BE0DAA29B3A30300A3D152 /* Animal.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

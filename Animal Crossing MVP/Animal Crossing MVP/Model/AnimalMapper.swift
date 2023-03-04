@@ -26,10 +26,11 @@ final class AnimalMapper {
 private extension AnimalMapper {
     private struct RemoteAnimal: Decodable {
         let id: Int
+        let icon_uri: String
         let personality: String
         
         var animal: Animal {
-            .init(id: id, personality: personality)
+            .init(id: id, avatarURL: icon_uri, personality: personality)
         }
     }
 }
