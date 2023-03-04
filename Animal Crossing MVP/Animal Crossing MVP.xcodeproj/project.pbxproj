@@ -10,9 +10,13 @@
 		04BE0D8F29B38CDA00A3D152 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BE0D8E29B38CDA00A3D152 /* AppDelegate.swift */; };
 		04BE0D9129B38CDA00A3D152 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BE0D9029B38CDA00A3D152 /* SceneDelegate.swift */; };
 		04BE0D9329B38CDA00A3D152 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BE0D9229B38CDA00A3D152 /* ViewController.swift */; };
-		04BE0D9629B38CDA00A3D152 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BE0D9429B38CDA00A3D152 /* Main.storyboard */; };
 		04BE0D9829B38CDB00A3D152 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BE0D9729B38CDB00A3D152 /* Assets.xcassets */; };
 		04BE0D9B29B38CDB00A3D152 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BE0D9929B38CDB00A3D152 /* LaunchScreen.storyboard */; };
+		04BE0DA329B38F6900A3D152 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BE0DA229B38F6900A3D152 /* HTTPClient.swift */; };
+		04BE0DA529B38F8F00A3D152 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BE0DA429B38F8F00A3D152 /* NetworkError.swift */; };
+		04BE0DA729B3907F00A3D152 /* AnimalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BE0DA629B3907F00A3D152 /* AnimalService.swift */; };
+		04BE0DA929B3964B00A3D152 /* AnimalMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BE0DA829B3964B00A3D152 /* AnimalMapper.swift */; };
+		04BE0DAB29B3A30300A3D152 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BE0DAA29B3A30300A3D152 /* Animal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +24,14 @@
 		04BE0D8E29B38CDA00A3D152 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04BE0D9029B38CDA00A3D152 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		04BE0D9229B38CDA00A3D152 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		04BE0D9529B38CDA00A3D152 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04BE0D9729B38CDB00A3D152 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04BE0D9A29B38CDB00A3D152 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04BE0D9C29B38CDB00A3D152 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04BE0DA229B38F6900A3D152 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		04BE0DA429B38F8F00A3D152 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		04BE0DA629B3907F00A3D152 /* AnimalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalService.swift; sourceTree = "<group>"; };
+		04BE0DA829B3964B00A3D152 /* AnimalMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalMapper.swift; sourceTree = "<group>"; };
+		04BE0DAA29B3A30300A3D152 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +67,24 @@
 				04BE0D8E29B38CDA00A3D152 /* AppDelegate.swift */,
 				04BE0D9029B38CDA00A3D152 /* SceneDelegate.swift */,
 				04BE0D9229B38CDA00A3D152 /* ViewController.swift */,
-				04BE0D9429B38CDA00A3D152 /* Main.storyboard */,
+				04BE0DAC29B3A49A00A3D152 /* Model */,
 				04BE0D9729B38CDB00A3D152 /* Assets.xcassets */,
 				04BE0D9929B38CDB00A3D152 /* LaunchScreen.storyboard */,
 				04BE0D9C29B38CDB00A3D152 /* Info.plist */,
 			);
 			path = "Animal Crossing MVP";
+			sourceTree = "<group>";
+		};
+		04BE0DAC29B3A49A00A3D152 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04BE0DA229B38F6900A3D152 /* HTTPClient.swift */,
+				04BE0DA629B3907F00A3D152 /* AnimalService.swift */,
+				04BE0DA829B3964B00A3D152 /* AnimalMapper.swift */,
+				04BE0DA429B38F8F00A3D152 /* NetworkError.swift */,
+				04BE0DAA29B3A30300A3D152 /* Animal.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +147,6 @@
 			files = (
 				04BE0D9B29B38CDB00A3D152 /* LaunchScreen.storyboard in Resources */,
 				04BE0D9829B38CDB00A3D152 /* Assets.xcassets in Resources */,
-				04BE0D9629B38CDA00A3D152 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,22 +158,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				04BE0D9329B38CDA00A3D152 /* ViewController.swift in Sources */,
+				04BE0DAB29B3A30300A3D152 /* Animal.swift in Sources */,
+				04BE0DA929B3964B00A3D152 /* AnimalMapper.swift in Sources */,
 				04BE0D8F29B38CDA00A3D152 /* AppDelegate.swift in Sources */,
+				04BE0DA329B38F6900A3D152 /* HTTPClient.swift in Sources */,
+				04BE0DA729B3907F00A3D152 /* AnimalService.swift in Sources */,
 				04BE0D9129B38CDA00A3D152 /* SceneDelegate.swift in Sources */,
+				04BE0DA529B38F8F00A3D152 /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		04BE0D9429B38CDA00A3D152 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04BE0D9529B38CDA00A3D152 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		04BE0D9929B38CDB00A3D152 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +308,6 @@
 				INFOPLIST_FILE = "Animal Crossing MVP/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -319,7 +334,6 @@
 				INFOPLIST_FILE = "Animal Crossing MVP/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
