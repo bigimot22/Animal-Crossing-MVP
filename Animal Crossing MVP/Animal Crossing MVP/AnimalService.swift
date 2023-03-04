@@ -25,7 +25,7 @@ final class RemoteAnimalService: AnimalService {
                 
             case let .success((data, response)):
                 print("👀 response code:", response.statusCode)
-                completion(.success([]))
+                completion(AnimalMapper.map(data, from: response))
             case .failure(_):
                 completion(.failure(NetworkError.connectionError))
             }

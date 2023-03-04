@@ -15,6 +15,7 @@
 		04BE0DA329B38F6900A3D152 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BE0DA229B38F6900A3D152 /* HTTPClient.swift */; };
 		04BE0DA529B38F8F00A3D152 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BE0DA429B38F8F00A3D152 /* NetworkError.swift */; };
 		04BE0DA729B3907F00A3D152 /* AnimalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BE0DA629B3907F00A3D152 /* AnimalService.swift */; };
+		04BE0DA929B3964B00A3D152 /* AnimalMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BE0DA829B3964B00A3D152 /* AnimalMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		04BE0DA229B38F6900A3D152 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		04BE0DA429B38F8F00A3D152 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		04BE0DA629B3907F00A3D152 /* AnimalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalService.swift; sourceTree = "<group>"; };
+		04BE0DA829B3964B00A3D152 /* AnimalMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				04BE0D9229B38CDA00A3D152 /* ViewController.swift */,
 				04BE0DA229B38F6900A3D152 /* HTTPClient.swift */,
 				04BE0DA629B3907F00A3D152 /* AnimalService.swift */,
+				04BE0DA829B3964B00A3D152 /* AnimalMapper.swift */,
 				04BE0DA429B38F8F00A3D152 /* NetworkError.swift */,
 				04BE0D9729B38CDB00A3D152 /* Assets.xcassets */,
 				04BE0D9929B38CDB00A3D152 /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04BE0D9329B38CDA00A3D152 /* ViewController.swift in Sources */,
+				04BE0DA929B3964B00A3D152 /* AnimalMapper.swift in Sources */,
 				04BE0D8F29B38CDA00A3D152 /* AppDelegate.swift in Sources */,
 				04BE0DA329B38F6900A3D152 /* HTTPClient.swift in Sources */,
 				04BE0DA729B3907F00A3D152 /* AnimalService.swift in Sources */,
