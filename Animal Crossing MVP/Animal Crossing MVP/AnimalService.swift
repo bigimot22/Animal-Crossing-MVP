@@ -19,7 +19,7 @@ final class RemoteAnimalService: AnimalService {
     }
     
     func getCharacters(completion: @escaping (Result<[String], Error>) -> Void) {
-        let url = URL(string: "https://acnhapi.com/v1/images/villagers")!
+        let url = URL(string: "https://acnhapi.com/v1/villagers/")!
         client.get(from: url) { result in
             switch result {
                 
