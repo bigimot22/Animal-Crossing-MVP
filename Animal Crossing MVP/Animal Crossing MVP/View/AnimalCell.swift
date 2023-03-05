@@ -11,7 +11,7 @@ import SDWebImage
 class AnimalCell: UITableViewCell {
     static let identifier = "AnimalCell"
     
-    private lazy var titleLabel: UILabel = {
+    private lazy var nameLabel: UILabel = {
         let label = UILabel()
         return label
     }()
@@ -27,7 +27,10 @@ class AnimalCell: UITableViewCell {
         return imageView
     }()
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+    override init(
+        style: UITableViewCell.CellStyle,
+        reuseIdentifier: String?
+    ) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupViews()
     }
@@ -40,7 +43,7 @@ class AnimalCell: UITableViewCell {
 
 extension AnimalCell {
     func render(title: String, imageUrl: String) {
-        titleLabel.text = title
+        nameLabel.text = title
         let url = URL(string: imageUrl)
         imageContainer.sd_setImage(
             with: url,
@@ -57,7 +60,7 @@ private extension AnimalCell {
     var imageWidth: Double { 70.0 }
     
     func setupViews() {
-        self.addSubview(titleLabel)
+        self.addSubview(nameLabel)
         self.addSubview(imageContainer)
         layoutImageContainer()
         layoutTitle()
@@ -78,15 +81,15 @@ private extension AnimalCell {
     }
     
     func layoutTitle() {
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor
+            nameLabel.topAnchor
                 .constraint(equalTo: self.topAnchor),
-            titleLabel.leadingAnchor
+            nameLabel.leadingAnchor
                 .constraint(equalTo: imageContainer.trailingAnchor, constant: cellSpacing),
-            titleLabel.bottomAnchor
+            nameLabel.bottomAnchor
                 .constraint(equalTo: self.bottomAnchor),
-            titleLabel.trailingAnchor
+            nameLabel.trailingAnchor
                 .constraint(equalTo: self.trailingAnchor, constant: -cellPadding)
         ])
     }

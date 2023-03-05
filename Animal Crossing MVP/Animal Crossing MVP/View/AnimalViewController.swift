@@ -39,6 +39,7 @@ extension AnimalViewController: AnimalViewProtocol {
     
     func failure(error: Error) {
         print("👀 got error:", error)
+        //TODO: Show error view
     }
     
     
@@ -54,7 +55,6 @@ private extension AnimalViewController {
     func setListView() {
       tableview.register(AnimalCell.self, forCellReuseIdentifier: AnimalCell.identifier)
       tableview.dataSource = self
-//      tableview.delegate = self
     }
     
     func addConstraints() {
@@ -64,19 +64,26 @@ private extension AnimalViewController {
         tableview.leadingAnchor.constraint(equalTo: view.leadingAnchor),
         tableview.trailingAnchor.constraint(equalTo: view.trailingAnchor),
         tableview.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        
       ])
     }
     
 }
 
 extension AnimalViewController: UITableViewDataSource {
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  func tableView(
+    _ tableView: UITableView,
+    numberOfRowsInSection section: Int
+  ) -> Int {
     return presenter.animals.count
   }
   
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    guard let cell = tableview.dequeueReusableCell(withIdentifier: AnimalCell.identifier, for: indexPath) as? AnimalCell
+  func tableView(
+    _ tableView: UITableView,
+    cellForRowAt indexPath: IndexPath
+  ) -> UITableViewCell {
+    guard let cell = tableview.dequeueReusableCell(
+        withIdentifier: AnimalCell.identifier,
+        for: indexPath) as? AnimalCell
     else {
       fatalError("Failed to dequeue a cell with identifier \(AnimalCell.identifier) matching type \(AnimalCell.self)")
     }
