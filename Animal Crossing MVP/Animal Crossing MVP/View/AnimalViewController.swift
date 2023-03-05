@@ -12,7 +12,7 @@ protocol AnimalViewProtocol: AnyObject {
   func failure(error: Error)
 }
 
-class ViewController: UIViewController {
+class AnimalViewController: UIViewController {
     var presenter: AnimalPresenter!
 
     override func viewDidLoad() {
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController: AnimalViewProtocol {
+extension AnimalViewController: AnimalViewProtocol {
     func success() {
         print("👀 got items")
     }

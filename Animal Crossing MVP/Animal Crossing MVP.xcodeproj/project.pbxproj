@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		04BE0D8F29B38CDA00A3D152 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BE0D8E29B38CDA00A3D152 /* AppDelegate.swift */; };
 		04BE0D9129B38CDA00A3D152 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BE0D9029B38CDA00A3D152 /* SceneDelegate.swift */; };
-		04BE0D9329B38CDA00A3D152 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BE0D9229B38CDA00A3D152 /* ViewController.swift */; };
+		04BE0D9329B38CDA00A3D152 /* AnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BE0D9229B38CDA00A3D152 /* AnimalViewController.swift */; };
 		04BE0D9829B38CDB00A3D152 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BE0D9729B38CDB00A3D152 /* Assets.xcassets */; };
 		04BE0D9B29B38CDB00A3D152 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BE0D9929B38CDB00A3D152 /* LaunchScreen.storyboard */; };
 		04BE0DA329B38F6900A3D152 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BE0DA229B38F6900A3D152 /* HTTPClient.swift */; };
@@ -24,7 +24,7 @@
 		04BE0D8B29B38CDA00A3D152 /* Animal Crossing MVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Animal Crossing MVP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BE0D8E29B38CDA00A3D152 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04BE0D9029B38CDA00A3D152 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		04BE0D9229B38CDA00A3D152 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04BE0D9229B38CDA00A3D152 /* AnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalViewController.swift; sourceTree = "<group>"; };
 		04BE0D9729B38CDB00A3D152 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04BE0D9A29B38CDB00A3D152 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04BE0D9C29B38CDB00A3D152 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -68,9 +68,9 @@
 			children = (
 				04BE0D8E29B38CDA00A3D152 /* AppDelegate.swift */,
 				04BE0D9029B38CDA00A3D152 /* SceneDelegate.swift */,
+				04BE0DAC29B3A49A00A3D152 /* Model */,
 				04BE0DAE29B48A3100A3D152 /* View */,
 				04BE0DAD29B48A2000A3D152 /* Presenter */,
-				04BE0DAC29B3A49A00A3D152 /* Model */,
 				04BE0D9729B38CDB00A3D152 /* Assets.xcassets */,
 				04BE0D9929B38CDB00A3D152 /* LaunchScreen.storyboard */,
 				04BE0D9C29B38CDB00A3D152 /* Info.plist */,
@@ -101,7 +101,7 @@
 		04BE0DAE29B48A3100A3D152 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				04BE0D9229B38CDA00A3D152 /* ViewController.swift */,
+				04BE0D9229B38CDA00A3D152 /* AnimalViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -176,7 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04BE0D9329B38CDA00A3D152 /* ViewController.swift in Sources */,
+				04BE0D9329B38CDA00A3D152 /* AnimalViewController.swift in Sources */,
 				04BE0DAB29B3A30300A3D152 /* Animal.swift in Sources */,
 				04BE0DA929B3964B00A3D152 /* AnimalMapper.swift in Sources */,
 				04BE0D8F29B38CDA00A3D152 /* AppDelegate.swift in Sources */,
