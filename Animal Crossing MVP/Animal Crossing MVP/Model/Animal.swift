@@ -11,4 +11,6 @@ struct Animal {
     let id: Int
     let avatarURL: String
     let personality: String
+    let species: String
+    let name: String
 }
