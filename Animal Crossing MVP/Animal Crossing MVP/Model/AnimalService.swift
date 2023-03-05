@@ -19,12 +19,11 @@ final class RemoteAnimalService: AnimalService {
     }
     
     func getAnimals(completion: @escaping (Result<[Animal], Error>) -> Void) {
-        let url = URL(string: "https://acnhapi.com/v1/villagers/")!
+        let url = AnimalEndPoint.animals.url(baseURL: Constants.baseURL)
         client.get(from: url) { result in
             switch result {
                 
             case let .success((data, response)):
-                print("👀 response code:", response.statusCode)
                 completion(AnimalMapper.map(data, from: response))
             case .failure(_):
                 completion(.failure(NetworkError.connectionError))
