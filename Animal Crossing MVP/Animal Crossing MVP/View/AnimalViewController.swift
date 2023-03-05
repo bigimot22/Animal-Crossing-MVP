@@ -89,7 +89,12 @@ extension AnimalViewController: UITableViewDataSource {
     }
     
     let animal = presenter.animals[indexPath.row]
-    cell.render(title: animal.name, imageUrl: animal.avatarURL)
+      cell.render(
+        title: animal.name,
+        imageUrl: animal.avatarURL,
+        species: animal.species,
+        personality: animal.personality
+      )
     return cell
   }
   

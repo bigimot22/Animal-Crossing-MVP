@@ -27,6 +27,59 @@ class AnimalCell: UITableViewCell {
         return imageView
     }()
     
+    private lazy var speciesLabel: UILabel = {
+        let label = UILabel()
+        label.text = "species"
+        return label
+    }()
+    
+    private lazy var speciesIcon: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(systemName: "pawprint.circle.fill")
+        imageView.contentMode = .scaleAspectFit
+        imageView.clipsToBounds = true
+        return imageView
+    }()
+    
+    
+    private lazy var speciesStackView: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .horizontal
+        stack.alignment = .leading
+        stack.distribution = .fillProportionally
+        return stack
+    }()
+    
+    private lazy var personalityLabel: UILabel = {
+        let label = UILabel()
+        label.text = "personality"
+        return label
+    }()
+    
+    private lazy var personalityIcon: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(systemName: "leaf.circle.fill")
+        imageView.contentMode = .scaleAspectFit
+        imageView.clipsToBounds = true
+        return imageView
+    }()
+    
+    private lazy var personalityStackView: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .horizontal
+        stack.alignment = .leading
+        stack.distribution = .fillProportionally
+        return stack
+    }()
+    
+    private lazy var infoStackView: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .vertical
+        stack.alignment = .leading
+        stack.distribution = .fillProportionally
+        return stack
+    }()
+    
     override init(
         style: UITableViewCell.CellStyle,
         reuseIdentifier: String?
@@ -42,8 +95,15 @@ class AnimalCell: UITableViewCell {
 }
 
 extension AnimalCell {
-    func render(title: String, imageUrl: String) {
+    func render(
+        title: String,
+        imageUrl: String,
+        species: String,
+        personality: String
+    ) {
         nameLabel.text = title
+        speciesLabel.text = species
+        personalityLabel.text = personality
         let url = URL(string: imageUrl)
         imageContainer.sd_setImage(
             with: url,
@@ -62,8 +122,16 @@ private extension AnimalCell {
     func setupViews() {
         self.addSubview(nameLabel)
         self.addSubview(imageContainer)
+        speciesStackView.addArrangedSubview(speciesIcon)
+        speciesStackView.addArrangedSubview(speciesLabel)
+        personalityStackView.addArrangedSubview(personalityIcon)
+        personalityStackView.addArrangedSubview(personalityLabel)
+        infoStackView.addArrangedSubview(nameLabel)
+        infoStackView.addArrangedSubview(speciesStackView)
+        infoStackView.addArrangedSubview(personalityStackView)
+        self.addSubview(infoStackView)
         layoutImageContainer()
-        layoutTitle()
+        layoutInfoStack()
     }
     
     func layoutImageContainer() {
@@ -80,16 +148,16 @@ private extension AnimalCell {
         ])
     }
     
-    func layoutTitle() {
-        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+    func layoutInfoStack() {
+        infoStackView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            nameLabel.topAnchor
-                .constraint(equalTo: self.topAnchor),
-            nameLabel.leadingAnchor
+            infoStackView.topAnchor
+                .constraint(equalTo: self.topAnchor, constant: cellSpacing),
+            infoStackView.leadingAnchor
                 .constraint(equalTo: imageContainer.trailingAnchor, constant: cellSpacing),
-            nameLabel.bottomAnchor
+            infoStackView.bottomAnchor
                 .constraint(equalTo: self.bottomAnchor),
-            nameLabel.trailingAnchor
+            infoStackView.trailingAnchor
                 .constraint(equalTo: self.trailingAnchor, constant: -cellPadding)
         ])
     }
