@@ -20,6 +20,8 @@
 		04BE0DB029B48A6400A3D152 /* AnimalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BE0DAF29B48A6400A3D152 /* AnimalPresenter.swift */; };
 		04BE0DB229B4914600A3D152 /* AnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BE0DB129B4914600A3D152 /* AnimalCell.swift */; };
 		04BE0DB529B494A700A3D152 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 04BE0DB429B494A700A3D152 /* SDWebImage */; };
+		04BE0DB929B4B30F00A3D152 /* AnimalEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BE0DB829B4B30F00A3D152 /* AnimalEndPoint.swift */; };
+		04BE0DBB29B4B41000A3D152 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BE0DBA29B4B41000A3D152 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		04BE0DAA29B3A30300A3D152 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		04BE0DAF29B48A6400A3D152 /* AnimalPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalPresenter.swift; sourceTree = "<group>"; };
 		04BE0DB129B4914600A3D152 /* AnimalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCell.swift; sourceTree = "<group>"; };
+		04BE0DB829B4B30F00A3D152 /* AnimalEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalEndPoint.swift; sourceTree = "<group>"; };
+		04BE0DBA29B4B41000A3D152 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 			children = (
 				04BE0D8E29B38CDA00A3D152 /* AppDelegate.swift */,
 				04BE0D9029B38CDA00A3D152 /* SceneDelegate.swift */,
+				04BE0DBA29B4B41000A3D152 /* Constants.swift */,
 				04BE0DAC29B3A49A00A3D152 /* Model */,
 				04BE0DAE29B48A3100A3D152 /* View */,
 				04BE0DAD29B48A2000A3D152 /* Presenter */,
@@ -87,6 +92,7 @@
 			children = (
 				04BE0DA229B38F6900A3D152 /* HTTPClient.swift */,
 				04BE0DA629B3907F00A3D152 /* AnimalService.swift */,
+				04BE0DB829B4B30F00A3D152 /* AnimalEndPoint.swift */,
 				04BE0DA829B3964B00A3D152 /* AnimalMapper.swift */,
 				04BE0DA429B38F8F00A3D152 /* NetworkError.swift */,
 				04BE0DAA29B3A30300A3D152 /* Animal.swift */,
@@ -195,8 +201,10 @@
 				04BE0DA729B3907F00A3D152 /* AnimalService.swift in Sources */,
 				04BE0DB029B48A6400A3D152 /* AnimalPresenter.swift in Sources */,
 				04BE0DB229B4914600A3D152 /* AnimalCell.swift in Sources */,
+				04BE0DB929B4B30F00A3D152 /* AnimalEndPoint.swift in Sources */,
 				04BE0D9129B38CDA00A3D152 /* SceneDelegate.swift in Sources */,
 				04BE0DA529B38F8F00A3D152 /* NetworkError.swift in Sources */,
+				04BE0DBB29B4B41000A3D152 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
