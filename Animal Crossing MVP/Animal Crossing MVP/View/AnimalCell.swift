@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class AnimalCell: UITableViewCell {
     static let identifier = "AnimalCell"
@@ -17,10 +18,11 @@ class AnimalCell: UITableViewCell {
     
     private lazy var imageContainer: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .systemIndigo
-        imageView.contentMode = .scaleAspectFill
+        imageView.backgroundColor = .systemGray6
+        imageView.contentMode = .scaleAspectFit
         imageView.layer.cornerRadius = imageCornerRadius
         imageView.layer.borderWidth = 1
+        imageView.layer.borderColor = UIColor.systemIndigo.cgColor
         imageView.clipsToBounds = true
         return imageView
     }()
@@ -40,7 +42,10 @@ extension AnimalCell {
     func render(title: String, imageUrl: String) {
         titleLabel.text = title
         let url = URL(string: imageUrl)
-        imageContainer.image = UIImage(systemName: "photo.circle")
+        imageContainer.sd_setImage(
+            with: url,
+            placeholderImage: UIImage(systemName: "photo.circle")
+        )
     }
     
 }
@@ -48,8 +53,8 @@ extension AnimalCell {
 private extension AnimalCell {
     var cellPadding: Double { 16.0 }
     var cellSpacing: Double { 8.0 }
-    var imageCornerRadius: Double { 34.0 }
-    var imageWidth: Double { 100.0 }
+    var imageCornerRadius: Double { 35.0 }
+    var imageWidth: Double { 70.0 }
     
     func setupViews() {
         self.addSubview(titleLabel)
