@@ -28,12 +28,14 @@ class DefaultAnimalPresenter: AnimalPresenter {
     
     func getAnimals() {
         animalService.getAnimals {[weak self] result in
-            switch result {
-            case let .success(items):
-                self?.animals = items
-                self?.view?.success()
-            case let .failure(error):
-                self?.view?.failure(error: error)
+            DispatchQueue.main.async {
+                switch result {
+                case let .success(items):
+                    self?.animals = items
+                    self?.view?.success()
+                case let .failure(error):
+                    self?.view?.failure(error: error)
+                }
             }
         }
     }
