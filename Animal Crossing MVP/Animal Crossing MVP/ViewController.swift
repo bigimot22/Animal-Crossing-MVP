@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         view.backgroundColor = .systemIndigo
         
         let ns = RemoteAnimalService(client: DefaultHTTPClient())
-        ns.getCharacters { result in
+        ns.getAnimals { result in
             switch result {
             case let .success(items):
                 print("👀 Items:", items)

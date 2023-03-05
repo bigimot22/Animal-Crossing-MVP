@@ -27,10 +27,18 @@ private extension AnimalMapper {
     private struct RemoteAnimal: Decodable {
         let id: Int
         let icon_uri: String
+        let name: [String: String]
         let personality: String
+        let species: String
         
         var animal: Animal {
-            .init(id: id, avatarURL: icon_uri, personality: personality)
+            .init(
+                id: id,
+                avatarURL: icon_uri,
+                personality: personality,
+                species: species,
+                name: name["name-USen"] ?? ""
+            )
         }
     }
 }
